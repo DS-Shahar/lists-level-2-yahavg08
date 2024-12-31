@@ -11,8 +11,8 @@ public class Main {
        Node<Integer> L2 = buildList(arr1);
 
 
-//      System.out.println("ex1:" + ex1(L1, L2));
-//      System.out.println("ex2:" + ex2(L1));
+      System.out.println("ex1:" + ex1(L1, L2));
+      System.out.println("ex2:" + ex2(L1));
       System.out.println("ex3:" + ex3(L1, 8));
       System.out.println("ex4:" + ex4(L1));
       System.out.println("ex5:" + ex5(L1));
