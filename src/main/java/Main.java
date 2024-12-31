@@ -4,14 +4,16 @@ public class Main {
     public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int[] arr = {5, 8, 1, 12, 6,8, 9};
-        int[] arr1 = {10, 22, 33, 40, 50, 60, 70};
+        int[] arr1 = {5, 8, 1, 12, 6,8, 9};
+        int[] arr2 = {10, 22, 33, 40, 50, 60, 70};
+        int [] arr3 = {1,4,20,50,55}
 
-       Node<Integer> L1 = buildList(arr);
-       Node<Integer> L2 = buildList(arr1);
+       Node<Integer> L1 = buildList(arr1);
+       Node<Integer> L2 = buildList(arr2);
+       Node<Integer> L3 = buildList(arr3);
 
 
-      System.out.println("ex1:" + ex1(L1, L2));
+      System.out.println("ex1:" + ex1(L2, L3));
       System.out.println("ex2:" + ex2(L1));
       System.out.println("ex3:" + ex3(L1, 8));
       System.out.println("ex4:" + ex4(L1));
