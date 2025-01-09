@@ -18,7 +18,7 @@ public class Main {
       System.out.println("ex3:" + ex3(L1, 8));
       System.out.println("ex4:" + ex4(L1));
       System.out.println("ex5:" + ex5(L1));
-      System.out.print( ifDiffValues(L1, L1.getNext(),L1.getNext()));
+      System.out.println("ex6:" + ifDiffValues(L1, L1.getNext(),L1.getNext()));
 	 }
 
     }
