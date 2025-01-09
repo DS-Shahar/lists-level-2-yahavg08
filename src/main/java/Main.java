@@ -18,6 +18,9 @@ public class Main {
       System.out.println("ex3:" + ex3(L1, 8));
       System.out.println("ex4:" + ex4(L1));
       System.out.println("ex5:" + ex5(L1));
+      System.out.print( ifDiffValues(L1, L1.getNext(),L1.getNext()));
+	 }
+
     }
 
     public static Node<Integer> buildList(int[] arr) {
@@ -130,4 +133,15 @@ public class Main {
     		    }
     		    return L1;
     		}
+    
+	public static boolean ifDiffValues(Node<Integer> head, Node<Integer> current,Node<Integer> current1) {
+		if (!head.hasNext())
+			return true;
+		if(head.getValue().equals(current.getValue()))
+		return false;
+		else if (current.hasNext()) {
+			current=current.getNext();
+		}
+		return ifDiffValues(head.getNext(), current1.getNext(),current1.getNext());
+		}
 }
