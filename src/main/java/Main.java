@@ -19,6 +19,8 @@ public class Main {
       System.out.println("ex4:" + ex4(L1));
       System.out.println("ex5:" + ex5(L1));
       System.out.println("ex6:" + ex6(L1));
+System.out.println ("ex7:");
+	ex7(L1);
 	 }
 
     }
@@ -151,4 +153,33 @@ public class Main {
 		return Math.max(max, count);
 	
 	}
+public static void ex7(Node<Integer> head) {
+		int count=1,max=1;
+		Node<Integer>maxI= head;
+		Node<Integer>maxI2= head;
+		while (head.getNext() != null ) {
+			if(head.getValue()<=head.getNext().getValue()) {
+				count++;
+			}
+		else {
+			if (count>max) {
+				max= count;
+				maxI2= maxI;
+			}
+			count=1;
+			maxI=head.getNext();
+		}
+		head = head.getNext();
+		
+		}
+		if (count>max) {
+				max= count;
+				maxI2=maxI;
+		}
+		
+	for (int i=1; i<=max; i++){
+	 System.out.print( maxI2.getValue() + " , "  );
+	 maxI2=maxI2.getNext();
+	}
+ }
 }
