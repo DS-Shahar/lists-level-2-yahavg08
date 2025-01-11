@@ -18,7 +18,7 @@ public class Main {
       System.out.println("ex3:" + ex3(L1, 8));
       System.out.println("ex4:" + ex4(L1));
       System.out.println("ex5:" + ex5(L1));
-      System.out.println("ex6:" + ifDiffValues(L1, L1.getNext(),L1.getNext()));
+      System.out.println("ex6:" + ex6(L1));
 	 }
 
     }
@@ -134,14 +134,21 @@ public class Main {
     		    return L1;
     		}
     
-	public static boolean ifDiffValues(Node<Integer> head, Node<Integer> current,Node<Integer> current1) {
-		if (!head.hasNext())
-			return true;
-		if(head.getValue().equals(current.getValue()))
-		return false;
-		else if (current.hasNext()) {
-			current=current.getNext();
+	public static int ex6(Node<Integer> head) {
+		int count=1,max=1;
+		while (head.getNext() != null && head != null) {
+			if(head.getValue()<=head.getNext().getValue()) {
+				count++;
+			}
+		else {
+			if (count>max) {
+				max= count;
+			}
+			count=1;
 		}
-		return ifDiffValues(head.getNext(), current1.getNext(),current1.getNext());
+		head = head.getNext();
 		}
+		return Math.max(max, count);
+	
+	}
 }
